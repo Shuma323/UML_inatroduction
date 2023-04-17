@@ -5,13 +5,13 @@ actor 人事担当者#DDDDDD;line:black;line.bold;
 rectangle 従業員登録システム {
 usecase 社員情報を参照する
 usecase 変更届の提出
-usecase (<u><社員情報を修正する/u>\n拡張点\n変更届の受理) as input
+usecase (<u>社員情報を修正する\nExtends Point\n変更届の受理) as input
 usecase 社員の情報を従業員システムに登録する
 }
 人事担当者 --|> 社員
 社員 --> 社員情報を参照する
 社員 --> 変更届の提出
-変更届の提出 .> input
+変更届の提出 .> input : <<extend>>
 人事担当者 --> input
 人事担当者 --> 社員の情報を従業員システムに登録する
 @endum
