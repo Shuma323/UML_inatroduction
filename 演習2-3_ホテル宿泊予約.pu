@@ -1,0 +1,7 @@
+@startuml ユースケース図
+rectangle ホテル宿泊予約 {
+usecase 宿泊予約する
+usecase ログインする
+}
+宿泊予約する <. ログインする : << include >>
+@enduml
