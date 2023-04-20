@@ -5,6 +5,6 @@ rectangle ホテル宿泊予約 {
 usecase 宿泊予約する
 usecase ログインする
 }
-宿泊予約する <. ログインする : << include >>
-利用者 --> 予約する
+宿泊予約する .> ログインする : << include >>
+利用者 --> 宿泊予約する
 @enduml
