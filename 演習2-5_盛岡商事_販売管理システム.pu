@@ -1,10 +1,11 @@
 @startuml 盛岡商事
 left to right direction
-actor 担当者A#DDDDDD;line:black;line.bold;
+actor 出荷担当者担当者#DDDDDD;line:black;line.bold;
 rectangle 新規販売管理システム {
-usecase 注文商品をシステムで確認する << U1 >>
-usecase 商品の出荷状況をシステムに登録する << U2 >>
+usecase 注文商品をシステムで確認する
+usecase 商品の出荷状況をシステムに登録する 
 }
-担当者A --> 注文商品をシステムで確認する
-担当者A -->商品の出荷状況をシステムに登録する
+注文商品をシステムで確認する .> 商品の出荷状況をシステムに登録する : <<include>>
+出荷担当者 --> 注文商品をシステムで確認する
+出荷担当者 -->商品の出荷状況をシステムに登録する
 @endum
