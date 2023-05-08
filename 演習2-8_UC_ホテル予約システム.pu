@@ -1,0 +1,27 @@
+@startuml ホテル予約システム
+left to right direction
+actor 利用者
+actor 従業員
+actor 管理者
+rectangle ホテル予約システム{
+usecase 空席状況を確認する
+usecase (<u>予約する</u>\n拡張点\nキャンペーン期間) as input
+usecase 空席状況を入力する
+usecase 予約の集計する
+usecase ログインする
+usecase 会員登録する
+usecase キャンペーン価格にする
+
+}
+利用者 --> 空席状況を確認する
+利用者 --> input
+input ..> ログインする : << include >>
+input <.. キャンペーン価格にする : << extend >>
+会員登録する .> input : << include >>
+従業員 --> 空席状況を入力する
+空席状況を入力する ..> ログインする : << include >>
+管理者 --> 予約の集計する
+予約の集計する ..> ログインする : << include >>
+管理者 --|> 従業員
+
+@enduml
