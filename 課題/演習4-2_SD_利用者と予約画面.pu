@@ -1,0 +1,13 @@
+@startuml 利用者と予約画面
+ hide footbox
+skinparam style strictuml
+participant "user:ログイン" as seach
+participant ":予約画面" as control
+activate seach
+activate control
+seach ->> control: ログインメッセージ（）
+control ->> control :認証()
+activate control
+deactivate control
+deactivate control
+@enduml
