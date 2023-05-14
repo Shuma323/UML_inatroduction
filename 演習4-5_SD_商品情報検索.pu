@@ -11,7 +11,7 @@ activate membership
 membership -> boundary
 activate boundary
 boundary -> control:商品検索(商品番号)
-    activate 
+    activate control
     
     create productlist
     boundary -->> productlist:生成() <<create>>
