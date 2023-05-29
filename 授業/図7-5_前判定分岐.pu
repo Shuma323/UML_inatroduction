@@ -1,0 +1,15 @@
+@startuml 分岐
+title 垂直分岐の例
+!pragma useVerticalIf on
+start
+:アクティビティA;
+if (x > 0) then (true)
+:アクティビティB;
+else if (x == 0) then (true)
+:アクティビティC;
+else (false)
+:アクティビティD;
+endif
+:アクティビティE;
+stop
+@enduml

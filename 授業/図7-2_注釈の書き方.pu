@@ -1,0 +1,13 @@
+@startuml 注釈
+title 注釈の書き方
+start
+:アクティビティA;
+-> フローに補足説明;
+:アクティビティB;
+note right
+注釈
+アクティビティBに対する注釈です。
+end note
+:アクティビティC;
+stop
+@enduml
