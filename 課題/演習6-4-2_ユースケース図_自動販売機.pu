@@ -1,0 +1,8 @@
+@startuml
+' left to right direction
+actor 客#DDDDDD;line:black;line.bold;
+actor ベンダー#DDDDDD;line:black;line.bold;
+    usecase 自動販売機
+
+    客 -->自動販売機:飲み物を買える
+    ベンダー-->自動販売機:ボタンを押せば商品が出る

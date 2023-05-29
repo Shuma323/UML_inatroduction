@@ -1,0 +1,13 @@
+hide footbox
+
+actor 客 as user
+
+participant ":料金装置" as kane
+participant ":ボタン" as botan
+participant ":ベンダー装置" as benda
+
+user -> kane : 硬貨を入れる
+kane -> botan : ボタンを押す
+botan -> benda :　商品を判別
+
+benda --> user :商品を出す
