@@ -1,0 +1,9 @@
+@startuml 演習
+state 電源SW_OFF
+state 電源SW_ON{
+電源SW_OFF -> 電源SW_ON:　スイッチを入れる
+電源SW_ON -> 電源SW_OFF:　スイッチを切る
+右旋回 -> 左旋回:　ラインを外れる\n（光センサーが明るい）
+左旋回 -> 右旋回:　ラインに乗る\n（光センサーが暗い）
+}
+@enduml
